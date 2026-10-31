@@ -1,0 +1,1165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B22070E9-B047-4D32-9A4C-8D907B97AB71}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EduCare</RootNamespace>
+    <AssemblyName>EduCare</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\DashBoardController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\plugins\assets\css\animate.css" />
+    <Content Include="Content\plugins\assets\css\basic-admin.css" />
+    <Content Include="Content\plugins\assets\css\basic.css" />
+    <Content Include="Content\plugins\assets\css\default.css" />
+    <Content Include="Content\plugins\assets\css\filter.css" />
+    <Content Include="Content\plugins\assets\css\font-icons\dripicons.css" />
+    <Content Include="Content\plugins\assets\css\font-icons\font-awesome.css" />
+    <Content Include="Content\plugins\assets\css\font-icons\font-awesome.min.css" />
+    <Content Include="Content\plugins\assets\css\font-icons\icofont.css" />
+    <Content Include="Content\plugins\assets\css\font-icons\icofont.min.css" />
+    <Content Include="Content\plugins\assets\css\font-icons\lg\lgd41d.html" />
+    <Content Include="Content\plugins\assets\css\font-icons\lg\lgd641.html" />
+    <Content Include="Content\plugins\assets\css\font-icons\lg\lgd641.svg" />
+    <Content Include="Content\plugins\assets\css\font-icons\materialdesignicons.min.css" />
+    <Content Include="Content\plugins\assets\css\font-icons\pe-icon-7.css" />
+    <Content Include="Content\plugins\assets\css\font-icons\typicons.css" />
+    <Content Include="Content\plugins\assets\css\fonts\Teko.css" />
+    <Content Include="Content\plugins\assets\css\icons.css" />
+    <Content Include="Content\plugins\assets\css\lightgallery.css" />
+    <Content Include="Content\plugins\assets\css\main.css" />
+    <Content Include="Content\plugins\assets\css\media-queries.css" />
+    <Content Include="Content\plugins\assets\css\mega-menu.css" />
+    <Content Include="Content\plugins\assets\css\print\main.css" />
+    <Content Include="Content\plugins\assets\css\print\print-bootstrap.min.css" />
+    <Content Include="Content\plugins\assets\css\print\print-main.css" />
+    <Content Include="Content\plugins\assets\css\print\print-paper-result.css" />
+    <Content Include="Content\plugins\assets\css\question-paper.css" />
+    <Content Include="Content\plugins\assets\css\responsive.css" />
+    <Content Include="Content\plugins\assets\css\spinners.css" />
+    <Content Include="Content\plugins\assets\fonts\boxicons\css\boxicons.min.css" />
+    <Content Include="Content\plugins\assets\fonts\boxicons\index.html" />
+    <Content Include="Content\plugins\assets\fonts\dripicons\dripicons-v2.svg" />
+    <Content Include="Content\plugins\assets\fonts\feather-icon\feather-icon.css" />
+    <Content Include="Content\plugins\assets\fonts\feather-icon\icons\feather-icon\feather-icon-clipart.js" />
+    <Content Include="Content\plugins\assets\fonts\feather-icon\icons\feather-icon\feather-icon.js" />
+    <Content Include="Content\plugins\assets\fonts\feather-icon\icons\feather-icon\feather.min.js" />
+    <Content Include="Content\plugins\assets\fonts\font-awesome470\fontawesome-webfont.svg" />
+    <Content Include="Content\plugins\assets\fonts\fontawesome\fontawesome-webfont5b62.svg" />
+    <Content Include="Content\plugins\assets\fonts\icofont\icofont.svg" />
+    <Content Include="Content\plugins\assets\fonts\lgd41d.html" />
+    <Content Include="Content\plugins\assets\fonts\lgd641-2.html" />
+    <Content Include="Content\plugins\assets\fonts\lgd641-3.html" />
+    <Content Include="Content\plugins\assets\fonts\lgd641.html" />
+    <Content Include="Content\plugins\assets\fonts\material-design\materialdesignicons-webfontb675.svg" />
+    <Content Include="Content\plugins\assets\fonts\pe-icon-7\Pe-icon-7-strokebb1d.svg" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-300.svg" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-500.svg" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-regular.svg" />
+    <Content Include="Content\plugins\assets\fonts\typicons\typicons.svg" />
+    <Content Include="Content\plugins\assets\img\01.jpg" />
+    <Content Include="Content\plugins\assets\img\02.jpg" />
+    <Content Include="Content\plugins\assets\img\03.jpg" />
+    <Content Include="Content\plugins\assets\img\04.jpg" />
+    <Content Include="Content\plugins\assets\img\05.jpg" />
+    <Content Include="Content\plugins\assets\img\06.jpg" />
+    <Content Include="Content\plugins\assets\img\admin-logo-back.png" />
+    <Content Include="Content\plugins\assets\img\admin-logo.png" />
+    <Content Include="Content\plugins\assets\img\admin-logo2.png" />
+    <Content Include="Content\plugins\assets\img\big\circle.jpg" />
+    <Content Include="Content\plugins\assets\img\big\img-1.jpg" />
+    <Content Include="Content\plugins\assets\img\big\img1.jpg" />
+    <Content Include="Content\plugins\assets\img\big\img2.jpg" />
+    <Content Include="Content\plugins\assets\img\big\img3.jpg" />
+    <Content Include="Content\plugins\assets\img\big\img4.jpg" />
+    <Content Include="Content\plugins\assets\img\big\img5.jpg" />
+    <Content Include="Content\plugins\assets\img\big\img6.jpg" />
+    <Content Include="Content\plugins\assets\img\birthday.jpg" />
+    <Content Include="Content\plugins\assets\img\boder.jpg" />
+    <Content Include="Content\plugins\assets\img\boys.png" />
+    <Content Include="Content\plugins\assets\img\classteacher.png" />
+    <Content Include="Content\plugins\assets\img\el-b2.png" />
+    <Content Include="Content\plugins\assets\img\errorbg.jpg" />
+    <Content Include="Content\plugins\assets\img\Event-calender-bg.jpg" />
+    <Content Include="Content\plugins\assets\img\Event-calender-bg1256.jpg" />
+    <Content Include="Content\plugins\assets\img\favicon\favicon.png" />
+    <Content Include="Content\plugins\assets\img\fee-1.png" />
+    <Content Include="Content\plugins\assets\img\female-teacher.png" />
+    <Content Include="Content\plugins\assets\img\gallery\equal-size\mock1.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\equal-size\mock2.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\equal-size\mock3.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\equal-size\mock4.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\equal-size\mock5.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\equal-size\mock6.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\equal-size\mock7.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\equal-size\mock8.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock1.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock10.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock11.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock2.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock3.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock4.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock5.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock6.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock7.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock8.jpg" />
+    <Content Include="Content\plugins\assets\img\gallery\mock9.jpg" />
+    <Content Include="Content\plugins\assets\img\girls.png" />
+    <Content Include="Content\plugins\assets\img\heading-bg\slide1.jpg" />
+    <Content Include="Content\plugins\assets\img\heading-bg\slide2.jpg" />
+    <Content Include="Content\plugins\assets\img\heading-bg\slide3.jpg" />
+    <Content Include="Content\plugins\assets\img\heading-bg\slide4.jpg" />
+    <Content Include="Content\plugins\assets\img\heading-bg\slide6.jpg" />
+    <Content Include="Content\plugins\assets\img\heartbeat.svg" />
+    <Content Include="Content\plugins\assets\img\Homework-bg.jpg" />
+    <Content Include="Content\plugins\assets\img\icons\business\attachment.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\business-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\business-2.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\business-3.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\business-4.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\business-5.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\business-6.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\business-7.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\business.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\coins.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\edit.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\folder.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\graphic-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\graphic.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\man.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\message.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\money.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\pen.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\people-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\people.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\suitcase.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\target.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\technology-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\technology.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\transport.svg" />
+    <Content Include="Content\plugins\assets\img\icons\business\travel.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\aac.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\ace.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\ai.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\aut.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\avi.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\bin.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\bmp.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\cad.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\cdr.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\css.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\db.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\dmg.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\doc.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\docx.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\dwf.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\dwg.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\eps.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\exe.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\flac.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\gif.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\hlp.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\htm.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\html.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\ini.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\iso.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\java.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\jpg.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\js.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\mkv.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\mov.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\mp3.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\mp4.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\mpg.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\pdf.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\php.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\png.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\ppt.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\ps.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\psd.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\rar.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\rss.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\rtf.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\svg.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\swf.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\sys.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\tiff.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\txt.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\xls.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\xlsx.svg" />
+    <Content Include="Content\plugins\assets\img\icons\files\zip.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\abkhazia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\afghanistan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\aland-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\albania.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\algeria.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\american-samoa.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\andorra.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\angola.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\anguilla.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\antigua-and-barbuda.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\argentina.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\armenia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\aruba.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\australia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\austria.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\azerbaijan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\azores-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bahamas.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bahrain.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\balearic-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bangladesh.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\barbados.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\basque-country.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\belarus.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\belgium.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\belize.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\benin.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bermuda.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bhutan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bolivia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bonaire.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bosnia-and-herzegovina.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\botswana.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\brazil.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bristish-indian-ocean-territory.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\british-columbia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\british-virgin-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\bulgaria.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\cambodia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\canada.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\canary-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\central-african-republic.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\chile.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\china.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\cocos-island.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\colombia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\corsica.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\costa-rica.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\croatia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\cuba.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\curacao.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\cyprus.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\czech-republic.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\denmark.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\dominica.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\dominican-republic.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\ecuador.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\egypt.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\el-salvador.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\england.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\estonia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\ethiopia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\european-union.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\fiji.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\finland.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\france.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\french-polynesia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\gambia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\georgia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\germany.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\ghana.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\gibraltar.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\greece.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\greenland.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\grenada.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\guam.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\guinea.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\guyana.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\haiti.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\hawaii.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\hong-kong.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\hungary.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\iceland.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\india.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\indonesia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\iran.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\iraq.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\ireland.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\israel.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\italy.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\jamaica.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\japan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\jersey.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\jordan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\kazakhstan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\kenya.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\kuwait.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\laos.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\lebanon.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\lesotho.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\liberia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\libya.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\lithuania.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\luxembourg.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\macao.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\madagascar.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\madeira.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\malawi.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\malaysia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\maldives.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\mali.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\mauritania.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\mauritius.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\melilla.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\mexico.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\micronesia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\moldova.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\monaco.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\mongolia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\montenegro.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\morocco.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\myanmar.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\namibia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\nepal.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\netherlands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\new-zealand.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\nigeria.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\north-korea.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\northern-marianas-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\norway.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\oman.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\orkney-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\pakistan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\palau.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\palestine.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\panama.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\paraguay.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\peru.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\philippines.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\portugal.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\puerto-rico.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\qatar.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\republic-of-macedonia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\romania.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\russia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\rwanda.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\saba-island.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\san-marino.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\sao-tome-and-principe.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\saudi-arabia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\scotland.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\senegal.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\serbia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\singapore.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\slovakia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\slovenia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\solomon-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\somalia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\somaliland.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\south-africa.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\south-korea.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\spain.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\sri-lanka.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\st-lucia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\sudan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\sweden.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\switzerland.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\syria.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\taiwan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\tajikistan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\tanzania.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\thailand.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\tibet.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\trinidad-and-tobago.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\tunisia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\turkey.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\turkmenistan.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\uganda.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\ukraine.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\united-arab-emirates.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\united-kingdom.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\united-nations.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\united-states.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\uruguay.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\uzbekistn.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\vatican-city.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\venezuela.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\vietnam.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\virgin-islands.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\wales.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\yemen.svg" />
+    <Content Include="Content\plugins\assets\img\icons\flags\zimbabwe.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-10.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-11.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-12.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-13.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-14.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-15.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-16.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-17.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-18.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-19.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-2.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-20.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-21.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-22.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-23.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-24.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-25.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-26.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-27.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-28.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-29.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-3.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-30.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-31.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-32.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-33.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-34.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-35.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-4.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-5.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-6.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-7.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-8.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders-9.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\monocolour\folders.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-10.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-11.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-12.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-13.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-14.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-15.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-16.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-17.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-18.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-19.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-2.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-20.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-21.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-22.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-23.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-24.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-25.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-26.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-27.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-28.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-29.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-3.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-30.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-31.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-32.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-33.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-34.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-35.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-4.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-5.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-6.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-7.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-8.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders-9.svg" />
+    <Content Include="Content\plugins\assets\img\icons\folders\multicolour\folders.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\camera-2.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\camera-3.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\camera-4.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\camera.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\cinema.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\education-video.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\frame.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-2.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-3.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-4.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-5.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-6.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-7.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-8.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-9.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo-two.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\photo.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\play-arrows.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\play.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\signs.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\video-camera.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\video-play.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\video.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\vr-display.svg" />
+    <Content Include="Content\plugins\assets\img\icons\photo-video\youtube.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\alarm-clock.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\archives.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\atom.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\browser.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\C-Notification.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\cards.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\cloudy.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\cogwheel.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\compass.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\computer-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\computer.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\cone.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\crown.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\diamond.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\dice.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\edit-tools.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\file.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\firewall.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\flask.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\gamepad.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\H-Notification.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\hierarchy-structure.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\ladybug.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\laptop.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\layers.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\levels.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\link.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\magnifying-glass.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\microscope.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\N-Notification.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\open-box.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\P-Notification.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\padlock.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\pen.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\pie-chart.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\play-video.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\plug.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\protractor.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\puzzle.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\search.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\seo.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\shield.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\shopping-bag.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\shopping-cart.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\strategy.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\swiss-army-knife.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\target.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\traffic-lights.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\transfer.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\visibility.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\worldwide-1.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\worldwide.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\wrench.svg" />
+    <Content Include="Content\plugins\assets\img\icons\seo-developement\writing.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\android.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\behance.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\bing.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\box.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\buffer.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\creative-market.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\delicious.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\deviantart.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\dribbble.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\dropbox.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\envato.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\etsy.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\facebook.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\flickr.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\foursquare.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\google-plus.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\hi5.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\howcast.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\html-5.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\instagram.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\kickstarter.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\linkedin.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\medium.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\myspace.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\path.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\paypal.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\periscope.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\pinterest.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\plaxo.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\quora.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\reddit.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\scribd.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\shutterstock.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\skype.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\snapchat.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\soundcloud.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\spotify.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\stumbleupon.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\trello.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\tumblr.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\twitter.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\vimeo.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\vine.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\whatsapp.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\wikipedia.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\wordpress.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\yelp.svg" />
+    <Content Include="Content\plugins\assets\img\icons\social-media\youtube.svg" />
+    <Content Include="Content\plugins\assets\img\img1.jpg" />
+    <Content Include="Content\plugins\assets\img\img2.jpg" />
+    <Content Include="Content\plugins\assets\img\Loading-bg.jpg" />
+    <Content Include="Content\plugins\assets\img\loading.html" />
+    <Content Include="Content\plugins\assets\img\login-register.jpg" />
+    <Content Include="Content\plugins\assets\img\logo-dark.png" />
+    <Content Include="Content\plugins\assets\img\logo.png" />
+    <Content Include="Content\plugins\assets\img\male-teacher.png" />
+    <Content Include="Content\plugins\assets\img\modals\modal-4.png" />
+    <Content Include="Content\plugins\assets\img\modals\modal-5.png" />
+    <Content Include="Content\plugins\assets\img\modals\model.png" />
+    <Content Include="Content\plugins\assets\img\modals\model2.png" />
+    <Content Include="Content\plugins\assets\img\modals\model3.png" />
+    <Content Include="Content\plugins\assets\img\modules-bg.jpg" />
+    <Content Include="Content\plugins\assets\img\modules\Admission.png" />
+    <Content Include="Content\plugins\assets\img\modules\Admission1.png" />
+    <Content Include="Content\plugins\assets\img\modules\Admission3.png" />
+    <Content Include="Content\plugins\assets\img\modules\Communication .png" />
+    <Content Include="Content\plugins\assets\img\modules\Employee.png" />
+    <Content Include="Content\plugins\assets\img\modules\Guardian Panel.png" />
+    <Content Include="Content\plugins\assets\img\modules\Live Class.png" />
+    <Content Include="Content\plugins\assets\img\modules\Student.png" />
+    <Content Include="Content\plugins\assets\img\modules\Transport.png" />
+    <Content Include="Content\plugins\assets\img\outstandingfee.png" />
+    <Content Include="Content\plugins\assets\img\pro-back\background.png" />
+    <Content Include="Content\plugins\assets\img\product-1.jpg" />
+    <Content Include="Content\plugins\assets\img\product-2.jpg" />
+    <Content Include="Content\plugins\assets\img\product-3.jpg" />
+    <Content Include="Content\plugins\assets\img\profile-bg1.jpg" />
+    <Content Include="Content\plugins\assets\img\profile-bg2.jpg" />
+    <Content Include="Content\plugins\assets\img\quiz.png" />
+    <Content Include="Content\plugins\assets\img\refresh-page.png" />
+    <Content Include="Content\plugins\assets\img\result.png" />
+    <Content Include="Content\plugins\assets\img\sainik-logo.png" />
+    <Content Include="Content\plugins\assets\img\sainik-logo2.png" />
+    <Content Include="Content\plugins\assets\img\sections.jpg" />
+    <Content Include="Content\plugins\assets\img\start-now.gif" />
+    <Content Include="Content\plugins\assets\img\student-group.png" />
+    <Content Include="Content\plugins\assets\img\sweetalert\alert.png" />
+    <Content Include="Content\plugins\assets\img\sweetalert\alert2.png" />
+    <Content Include="Content\plugins\assets\img\sweetalert\alert3.png" />
+    <Content Include="Content\plugins\assets\img\sweetalert\alert4.png" />
+    <Content Include="Content\plugins\assets\img\sweetalert\alert5.png" />
+    <Content Include="Content\plugins\assets\img\sweetalert\alert6.png" />
+    <Content Include="Content\plugins\assets\img\sweetalert\alert7.png" />
+    <Content Include="Content\plugins\assets\img\sweetalert\alert8.png" />
+    <Content Include="Content\plugins\assets\img\teacher.png" />
+    <Content Include="Content\plugins\assets\img\users\avatar-1.jpg" />
+    <Content Include="Content\plugins\assets\img\users\avatar-2.jpg" />
+    <Content Include="Content\plugins\assets\img\users\avatar-3.jpg" />
+    <Content Include="Content\plugins\assets\img\users\avatar-4.jpg" />
+    <Content Include="Content\plugins\assets\img\users\avatar-5.jpg" />
+    <Content Include="Content\plugins\assets\img\users\img-user.jpg" />
+    <Content Include="Content\plugins\assets\img\video-play.png" />
+    <Content Include="Content\plugins\assets\img\vidyawell-logo-full-backup.png" />
+    <Content Include="Content\plugins\assets\img\vidyawell-logo-full.png" />
+    <Content Include="Content\plugins\assets\img\vimeo-play.png" />
+    <Content Include="Content\plugins\assets\img\youtube-play.png" />
+    <Content Include="Content\plugins\assets\js\amazingcarousel.js" />
+    <Content Include="Content\plugins\assets\js\bitcoin-init.js" />
+    <Content Include="Content\plugins\assets\js\bootstrap-carousel.js" />
+    <Content Include="Content\plugins\assets\js\c3-custom-chart.js" />
+    <Content Include="Content\plugins\assets\js\chart.chartjs.js" />
+    <Content Include="Content\plugins\assets\js\chartist-data.js" />
+    <Content Include="Content\plugins\assets\js\dashboard-dark.init.js" />
+    <Content Include="Content\plugins\assets\js\dashboard.init.js" />
+    <Content Include="Content\plugins\assets\js\db.js" />
+    <Content Include="Content\plugins\assets\js\dropdown-bootstrap-extended.js" />
+    <Content Include="Content\plugins\assets\js\dropify.js" />
+    <Content Include="Content\plugins\assets\js\ecommerce-dashboard.js" />
+    <Content Include="Content\plugins\assets\js\editable-init.js" />
+    <Content Include="Content\plugins\assets\js\error-init.js" />
+    <Content Include="Content\plugins\assets\js\flot-data-dashboard.js" />
+    <Content Include="Content\plugins\assets\js\flot-data.js" />
+    <Content Include="Content\plugins\assets\js\footable-init.js" />
+    <Content Include="Content\plugins\assets\js\form-advance-data.js" />
+    <Content Include="Content\plugins\assets\js\form-picker-data.js" />
+    <Content Include="Content\plugins\assets\js\froogaloop2.min.js" />
+    <Content Include="Content\plugins\assets\js\gallery-data.js" />
+    <Content Include="Content\plugins\assets\js\highcharts.js" />
+    <Content Include="Content\plugins\assets\js\init.js" />
+    <Content Include="Content\plugins\assets\js\initcarousel.js" />
+    <Content Include="Content\plugins\assets\js\isotope.js" />
+    <Content Include="Content\plugins\assets\js\jquery.bootstrap.newsbox.min.js" />
+    <Content Include="Content\plugins\assets\js\jquery.PrintArea.js" />
+    <Content Include="Content\plugins\assets\js\jquery.scrollbar.js" />
+    <Content Include="Content\plugins\assets\js\jquery.slimscroll.js" />
+    <Content Include="Content\plugins\assets\js\jquery.tooltipster.js" />
+    <Content Include="Content\plugins\assets\js\jquery.xeditable.init.js" />
+    <Content Include="Content\plugins\assets\js\jsgrid-data.js" />
+    <Content Include="Content\plugins\assets\js\lightgallery-all.js" />
+    <Content Include="Content\plugins\assets\js\mask.js" />
+    <Content Include="Content\plugins\assets\js\morris-data.js" />
+    <Content Include="Content\plugins\assets\js\multislider.js" />
+    <Content Include="Content\plugins\assets\js\owl-data.js" />
+    <Content Include="Content\plugins\assets\js\peity-data.js" />
+    <Content Include="Content\plugins\assets\js\print.js" />
+    <Content Include="Content\plugins\assets\js\random-class.js" />
+    <Content Include="Content\plugins\assets\js\rangeslider-data.js" />
+    <Content Include="Content\plugins\assets\js\ResizeSensor.js" />
+    <Content Include="Content\plugins\assets\js\stock-chart.init.js" />
+    <Content Include="Content\plugins\assets\js\summernote.init.js" />
+    <Content Include="Content\plugins\assets\js\sweetalert-data.js" />
+    <Content Include="Content\plugins\assets\js\toast-data.js" />
+    <Content Include="Content\plugins\assets\js\toggle.js" />
+    <Content Include="Content\plugins\assets\js\validate.js" />
+    <Content Include="Content\plugins\assets\Photos\spiral-blank.png" />
+    <Content Include="Content\plugins\assets\validation.js" />
+    <Content Include="Content\plugins\assets\videos\video1-2.html" />
+    <Content Include="Content\plugins\assets\videos\video1.html" />
+    <Content Include="Content\plugins\vendors\bower_components\amcharts\amcharts.js" />
+    <Content Include="Content\plugins\vendors\bower_components\amcharts\amstock.js" />
+    <Content Include="Content\plugins\vendors\bower_components\amcharts\serial.js" />
+    <Content Include="Content\plugins\vendors\bower_components\awesome-bootstrap-checkbox\awesome-bootstrap-checkbox.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-datepicker\bootstrap-datepicker.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-datepicker\bootstrap-datepicker.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-daterangepicker\daterangepicker.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-daterangepicker\daterangepicker.js" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-material-datetimepicker\css\bootstrap-material-datetimepicker.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-material-datetimepicker\js\bootstrap-material-datetimepicker.js" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-select\dist\css\bootstrap-select.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-select\dist\js\bootstrap-select.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-switch\dist\css\bootstrap3\bootstrap-switch.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-switch\dist\js\bootstrap-switch.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-tagsinput\dist\bootstrap-tagsinput.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-tagsinput\dist\bootstrap-tagsinput.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-touchspin\dist\jquery.bootstrap-touchspin.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-xeditable\css\bootstrap-editable.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-xeditable\img\clear.png" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-xeditable\img\loading.gif" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap-xeditable\js\bootstrap-editable.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\c3\c3.css" />
+    <Content Include="Content\plugins\vendors\bower_components\c3\c3.js" />
+    <Content Include="Content\plugins\vendors\bower_components\calendar\cal-init.js" />
+    <Content Include="Content\plugins\vendors\bower_components\calendar\calendar.css" />
+    <Content Include="Content\plugins\vendors\bower_components\calendar\fullcalendar.css" />
+    <Content Include="Content\plugins\vendors\bower_components\calendar\fullcalendar.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\calendar\jquery-ui.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\calendar\moment\moment.js" />
+    <Content Include="Content\plugins\vendors\bower_components\chart.js\Chart.js" />
+    <Content Include="Content\plugins\vendors\bower_components\chartist-js\dist\chartist.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\chartist-js\dist\chartist.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.css" />
+    <Content Include="Content\plugins\vendors\bower_components\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\clockpicker\dist\jquery-clockpicker.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\clockpicker\dist\jquery-clockpicker.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\d3\d3.js" />
+    <Content Include="Content\plugins\vendors\bower_components\d3\d3.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\data-table\css\buttons.dataTables.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\data-table\js\data-table-custom.js" />
+    <Content Include="Content\plugins\vendors\bower_components\data-table\js\jszip.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\data-table\js\pdfmake.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\data-table\js\vfs_fonts.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net-bs4\css\dataTables.bootstrap4.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net-bs4\js\dataTables.bootstrap4.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net-buttons\js\buttons.html5.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net-buttons\js\buttons.print.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net-buttons\js\dataTables.buttons.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net-responsive-bs4\css\responsive.bootstrap4.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net-responsive-bs4\js\responsive.bootstrap4.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net-responsive\js\dataTables.responsive.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables.net\js\jquery.dataTables.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables\dataTables.bootstrap.js" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables\media\css\jquery.dataTables.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables\media\images\sort_asc.png" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables\media\images\sort_asc_disabled.png" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables\media\images\sort_both.png" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables\media\images\sort_desc.png" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables\media\images\sort_desc_disabled.png" />
+    <Content Include="Content\plugins\vendors\bower_components\datatables\media\js\jquery.dataTables.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\dropify\dist\css\dropify.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\dropify\dist\fonts\dropify.svg" />
+    <Content Include="Content\plugins\vendors\bower_components\dropify\dist\js\dropify.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\echarts\dist\echarts-en.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\flot.tooltip\js\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\flot\excanvas.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\flot\jquery.flot.crosshair.js" />
+    <Content Include="Content\plugins\vendors\bower_components\flot\jquery.flot.js" />
+    <Content Include="Content\plugins\vendors\bower_components\flot\jquery.flot.pie.js" />
+    <Content Include="Content\plugins\vendors\bower_components\flot\jquery.flot.resize.js" />
+    <Content Include="Content\plugins\vendors\bower_components\flot\jquery.flot.stack.js" />
+    <Content Include="Content\plugins\vendors\bower_components\flot\jquery.flot.time.js" />
+    <Content Include="Content\plugins\vendors\bower_components\footable\css\fonts\footable.svg" />
+    <Content Include="Content\plugins\vendors\bower_components\footable\css\footable.core.css" />
+    <Content Include="Content\plugins\vendors\bower_components\footable\js\footable.all.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\forms-mod-bootstrap\dist\css\forms-mod-bootstrap.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\forms-mod-bootstrap\dist\js\forms-mod-bootstrap.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\gmaps\gmaps.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\gmaps\jquery.gmaps.js" />
+    <Content Include="Content\plugins\vendors\bower_components\index.html" />
+    <Content Include="Content\plugins\vendors\bower_components\ion.rangeSlider\css\ion.rangeSlider.css" />
+    <Content Include="Content\plugins\vendors\bower_components\ion.rangeSlider\css\ion.rangeSlider.skinFlat.css" />
+    <Content Include="Content\plugins\vendors\bower_components\ion.rangeSlider\img\sprite-skin-flat.png" />
+    <Content Include="Content\plugins\vendors\bower_components\ion.rangeSlider\js\ion.rangeSlider.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-asColorPicker-master\css\asColorPicker.css" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-asColorPicker-master\dist\jquery-asColorPicker.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-asColorPicker-master\images\alpha.png" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-asColorPicker-master\images\hue.png" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-asColorPicker-master\images\saturation.png" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-asColorPicker-master\images\transparent.png" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-asColorPicker-master\libs\jquery-asColor.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-asColorPicker-master\libs\jquery-asGradient.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-CountDownTimer\jquery.countdownTimer.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-CountDownTimer\jquery.countdownTimer.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-datatables-editable\jquery.dataTables.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-toast-plugin\dist\jquery.toast.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery-toast-plugin\dist\jquery.toast.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery.counterup\jquery.counterup.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\jsgrid\dist\jsgrid-theme.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\jsgrid\dist\jsgrid.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\jsgrid\dist\jsgrid.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\moment\min\moment-with-locales.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\moment\min\moment.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\moment\moment.js" />
+    <Content Include="Content\plugins\vendors\bower_components\morris-js\morris.css" />
+    <Content Include="Content\plugins\vendors\bower_components\morris-js\morris.js" />
+    <Content Include="Content\plugins\vendors\bower_components\multiselect\css\multi-select.css" />
+    <Content Include="Content\plugins\vendors\bower_components\multiselect\img\switch.png" />
+    <Content Include="Content\plugins\vendors\bower_components\multiselect\js\jquery.multi-select.js" />
+    <Content Include="Content\plugins\vendors\bower_components\owl.carousel\dist\assets\owl.carousel.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\owl.carousel\dist\assets\owl.theme.default.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\owl.carousel\dist\assets\owl.video.play.png" />
+    <Content Include="Content\plugins\vendors\bower_components\owl.carousel\dist\owl.carousel.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\peity\jquery.peity.init.js" />
+    <Content Include="Content\plugins\vendors\bower_components\peity\jquery.peity.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\raphael\raphael.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\select2\dist\css\select2.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\select2\dist\js\select2.full.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\skycons\skycons.js" />
+    <Content Include="Content\plugins\vendors\bower_components\sparkline\jquery.charts-sparkline.js" />
+    <Content Include="Content\plugins\vendors\bower_components\sparkline\jquery.sparkline.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\summernote\dist\summernote.css" />
+    <Content Include="Content\plugins\vendors\bower_components\summernote\dist\summernote.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\sweetalert\dist\sweetalert.css" />
+    <Content Include="Content\plugins\vendors\bower_components\sweetalert\dist\sweetalert.js" />
+    <Content Include="Content\plugins\vendors\bower_components\sweetalert\dist\sweetalert.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\switchery\dist\switchery.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\switchery\dist\switchery.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\tiny-editable\mindmup-editabletable.js" />
+    <Content Include="Content\plugins\vendors\bower_components\tiny-editable\numeric-input-example.js" />
+    <Content Include="Content\plugins\vendors\bower_components\tooltipster\tooltipster.bundle.min.css" />
+    <Content Include="Content\plugins\vendors\bower_components\tooltipster\tooltipster.bundle.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\vectormap\jquery-jvectormap-2.0.2.css" />
+    <Content Include="Content\plugins\vendors\bower_components\vectormap\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\vectormap\jquery-jvectormap-au-mill.js" />
+    <Content Include="Content\plugins\vendors\bower_components\vectormap\jquery-jvectormap-in-mill.js" />
+    <Content Include="Content\plugins\vendors\bower_components\vectormap\jquery-jvectormap-uk-mill-en.js" />
+    <Content Include="Content\plugins\vendors\bower_components\vectormap\jquery-jvectormap-us-aea-en.js" />
+    <Content Include="Content\plugins\vendors\bower_components\vectormap\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Content\plugins\vendors\bower_components\vectormap\jvectormap.custom.js" />
+    <Content Include="Content\plugins\vendors\bower_components\waypoints\lib\jquery.waypoints.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\web-ticker\jquery.webticker.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\wizard\jquery.steps.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\wizard\jquery.validate.min.js" />
+    <Content Include="Content\plugins\vendors\bower_components\wizard\steps.css" />
+    <Content Include="Content\plugins\vendors\bower_components\wizard\steps.js" />
+    <Content Include="Content\plugins\vendors\jquery-CountDownTimer\jquery.countdownTimer.js" />
+    <Content Include="Content\plugins\vendors\jquery-CountDownTimer\jquery.countdownTimer.min.js" />
+    <Content Include="Content\plugins\vendors\jquery.sparkline\dist\jquery.sparkline.min.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\plugins\assets\css\basic-admin.css--bkp" />
+    <Content Include="Content\plugins\assets\css\font-icons\lg\lgd641.ttf" />
+    <Content Include="Content\plugins\assets\css\font-icons\lg\lgd641.woff" />
+    <Content Include="Content\plugins\assets\css\main.css--bkp" />
+    <Content Include="Content\plugins\assets\css\print\print-main.css--bkp" />
+    <Content Include="Content\plugins\assets\fonts\boxicons\fonts\boxicons.eot" />
+    <Content Include="Content\plugins\assets\fonts\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Content\plugins\assets\fonts\boxicons\fonts\boxicons.woff" />
+    <Content Include="Content\plugins\assets\fonts\boxicons\fonts\boxicons.woff2" />
+    <Content Include="Content\plugins\assets\fonts\dripicons\dripicons-v2.eot" />
+    <Content Include="Content\plugins\assets\fonts\dripicons\dripicons-v2.ttf" />
+    <Content Include="Content\plugins\assets\fonts\dripicons\dripicons-v2.woff" />
+    <Content Include="Content\plugins\assets\fonts\dripicons\dripicons-v2d41d.eot" />
+    <Content Include="Content\plugins\assets\fonts\font-awesome470\fontawesome-webfont.eot" />
+    <Content Include="Content\plugins\assets\fonts\font-awesome470\fontawesome-webfont.ttf" />
+    <Content Include="Content\plugins\assets\fonts\font-awesome470\fontawesome-webfont.woff" />
+    <Content Include="Content\plugins\assets\fonts\font-awesome470\fontawesome-webfont.woff2" />
+    <Content Include="Content\plugins\assets\fonts\font-awesome470\FontAwesome.otf" />
+    <Content Include="Content\plugins\assets\fonts\fontawesome\fontawesome-webfont5b62.eot" />
+    <Content Include="Content\plugins\assets\fonts\fontawesome\fontawesome-webfont5b62.ttf" />
+    <Content Include="Content\plugins\assets\fonts\fontawesome\fontawesome-webfont5b62.woff" />
+    <Content Include="Content\plugins\assets\fonts\fontawesome\fontawesome-webfont5b62.woff2" />
+    <Content Include="Content\plugins\assets\fonts\fontawesome\fontawesome-webfontd41d.eot" />
+    <Content Include="Content\plugins\assets\fonts\icofont.zip" />
+    <Content Include="Content\plugins\assets\fonts\icofont\icofont.eot" />
+    <Content Include="Content\plugins\assets\fonts\icofont\icofont.ttf" />
+    <Content Include="Content\plugins\assets\fonts\icofont\icofont.woff" />
+    <Content Include="Content\plugins\assets\fonts\icofont\icofont.woff2" />
+    <Content Include="Content\plugins\assets\fonts\material-design\materialdesignicons-webfontb675.eot" />
+    <Content Include="Content\plugins\assets\fonts\material-design\materialdesignicons-webfontb675.ttf" />
+    <Content Include="Content\plugins\assets\fonts\material-design\materialdesignicons-webfontb675.woff" />
+    <Content Include="Content\plugins\assets\fonts\material-design\materialdesignicons-webfontb675.woff2" />
+    <Content Include="Content\plugins\assets\fonts\material-design\materialdesignicons-webfontd41d.eot" />
+    <Content Include="Content\plugins\assets\fonts\pe-icon-7\Pe-icon-7-strokebb1d.eot" />
+    <Content Include="Content\plugins\assets\fonts\pe-icon-7\Pe-icon-7-strokebb1d.ttf" />
+    <Content Include="Content\plugins\assets\fonts\pe-icon-7\Pe-icon-7-strokebb1d.woff" />
+    <Content Include="Content\plugins\assets\fonts\pe-icon-7\Pe-icon-7-stroked41d.eot" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-300.eot" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-300.ttf" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-300.woff" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-300.woff2" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-500.eot" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-500.ttf" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-500.woff" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-500.woff2" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-regular.eot" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-regular.ttf" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-regular.woff" />
+    <Content Include="Content\plugins\assets\fonts\teko-v9-latin\teko-v9-latin-regular.woff2" />
+    <Content Include="Content\plugins\assets\fonts\typicons\typicons.eot" />
+    <Content Include="Content\plugins\assets\fonts\typicons\typicons.ttf" />
+    <Content Include="Content\plugins\assets\fonts\typicons\typicons.woff" />
+    <Content Include="Content\plugins\assets\fonts\typicons\typiconsd41d.eot" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\plugins\vendors\bower_components\bootstrap\dist\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="Content\plugins\vendors\bower_components\dropify\dist\fonts\dropify.eot" />
+    <Content Include="Content\plugins\vendors\bower_components\dropify\dist\fonts\dropify.ttf" />
+    <Content Include="Content\plugins\vendors\bower_components\dropify\dist\fonts\dropify.woff" />
+    <Content Include="Content\plugins\vendors\bower_components\footable\css\fonts\footable.eot" />
+    <Content Include="Content\plugins\vendors\bower_components\footable\css\fonts\footable.ttf" />
+    <Content Include="Content\plugins\vendors\bower_components\footable\css\fonts\footable.woff" />
+    <Content Include="Content\plugins\vendors\bower_components\footable\css\fonts\footabled41d.eot" />
+    <Content Include="Content\plugins\vendors\bower_components\summernote\dist\font\summernoted41d.eot" />
+    <Content Include="Content\plugins\vendors\bower_components\summernote\dist\font\summernotef534.eot" />
+    <Content Include="Content\plugins\vendors\bower_components\summernote\dist\font\summernotef534.ttf" />
+    <Content Include="Content\plugins\vendors\bower_components\summernote\dist\font\summernotef534.woff" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\myjslib\app.js" />
+    <Content Include="Scripts\myjslib\controller.js" />
+    <Content Include="Scripts\myjslib\ddlBindings.js" />
+    <Content Include="Scripts\myjslib\GetMasterController.js" />
+    <Content Include="Scripts\myjslib\GlobalController.js" />
+    <Content Include="Scripts\myjslib\GradeMasterController.js" />
+    <Content Include="Scripts\myjslib\loginController.js" />
+    <Content Include="Scripts\myjslib\MarkingSchemeMasterController.js" />
+    <Content Include="Scripts\myjslib\myJs.js" />
+    <Content Include="Scripts\myjslib\NavigationController.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\DashBoard\QuickLinksDashBoard.cshtml" />
+    <Content Include="Views\Common\_CommonModuleMaster.cshtml" />
+    <Content Include="Views\DashBoard\AdminQuickLinksDashBoard.cshtml" />
+    <Content Include="Views\Common\_IframeMaster.cshtml" />
+    <Content Include="Views\Common\_IframeModuleMaster.cshtml" />
+    <Content Include="Views\Common\_CommonLayout.cshtml" />
+    <Content Include="Views\Common\_GuardianMaster.cshtml" />
+    <Content Include="Views\Common\_MainLayoutMaster.cshtml" />
+    <Content Include="Views\Shared\_LoginLayout.cshtml" />
+    <Content Include="Views\DashBoard\SidebarLink.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\plugins\assets\fonts\Ionicons\css\" />
+    <Folder Include="Content\plugins\assets\fonts\Ionicons\fonts\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14368</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:14368/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
